@@ -63,14 +63,7 @@ export default function Header() {
     
       
       <div className='flex gap-2 md:order-2'>
-        {/* <Button
-          className='w-12 h-10 hidden sm:inline'
-          color='gray'
-          pill
-          onClick={() => dispatch(toggleTheme())}
-        >
-          {theme === 'light' ? <FaSun /> : <FaMoon />}
-        </Button> */}
+       
         
         {currentUser ? (
           
@@ -115,6 +108,15 @@ export default function Header() {
       <Button className='w-12 h-10 lg:hidden' color='gray' pill>
         <AiOutlineSearch />
       </Button>
+
+       <Button
+          className='w-12 h-10  sm:inline'
+          color='gray'
+          pill
+          onClick={() => dispatch(toggleTheme())}
+        >
+          {theme === 'light' ? <FaSun /> : <FaMoon />}
+        </Button>
       </div>
       {/* <Navbar.Collapse>
         <Navbar.Link active={path === '/'} as={'div'}>
